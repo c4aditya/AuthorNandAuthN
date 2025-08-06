@@ -2,31 +2,29 @@ const mongoose = require("mongoose");
 
 const userSchema = mongoose.Schema({
 
-    firstName:{
+    FullName:{
         type:String,
-        requried:true,
+         required: true,
         trim:true,
-    },
-
-    lastName:{
-        type:String,
-        required:true,
-        trim:true,
-    },
-
+    }, 
     email:{
        type:String,
-       required:true,
+       required: true,
+    },
+
+    role:{
+        type:String,
+        emnu:["Admin","Student","User"]
     },
 
     password:{
         type:String,
-        required:true
+         required: true
     },
 
     confrimPassword:{
         type:String,
-        required:true
+        
     }
 })
 

@@ -6,6 +6,10 @@ require("dotenv").config();
 
 const PORT = process.env.PORT || 4000;
 
+// adding middlewares for fetching the json data 
+
+app.use(express.json())
+
 app.listen(PORT , () => {
     console.log(`Your Server is started on ${PORT}`);
 })
